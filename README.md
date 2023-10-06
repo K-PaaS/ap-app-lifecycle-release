@@ -70,22 +70,22 @@
   
 
 
-## PAAS-TA-APP-LIFECYCLE-SERVICE-RELEASE
+## ap-app-lifecycle-release
 
-### PaaS-TA APP Lifecycle Service Configuration
+### Application Platform APP Lifecycle Service Configuration
 - app-lifecycle-server :: N machine(s)
-- app-lifecycle-service-broker :: 1 machine
+- ap-app-lifecycle-broker :: 1 machine
 - mariadb :: 1 machine
 
-### Create PaaS-TA APP Lifecycle Service Release
+### Create Application Platform APP Lifecycle Service Release
 - Download the latest APP Lifecycle Release
     ```
-    $ git clone https://github.com/PaaS-TA/PAAS-TA-APP-LIFECYCLE-SERVICE-RELEASE.git
+    $ git clone https://github.com/K-PaaS/ap-app-lifecycle-release.git
     ```
 - Download & Copy "source files" into the src directory
     ```
     ## download source files
-    $ wget -O src.zip https://nextcloud.paas-ta.org/index.php/s/zEYpzks2CZTbxM3/download
+    $ wget -O src.zip https://nextcloud.k-paas.org/index.php/s/7Do7Rr57EifaSoS/download
     
     ## unzip download source files
     $ unzip src.zip 
@@ -104,8 +104,8 @@
     ├── postgres
     │   ├── downloaurl
     │   └── postgresql-11.20.tar.gz
-    ├── service-broker
-    │   └── paasta-app-lifecycle-service-broker.jar
+    ├── ap-app-lifecycle-broker
+    │   └── ap-app-lifecycle-broker.jar
     ├── taiga-back
     │   ├── get-pip.py
     │   ├── gosu-amd64
@@ -115,13 +115,10 @@
     ```
 - Create APP Lifecycle Release
     ```
-    $ cd PAAS-TA-APP-LIFECYCLE-SERVICE-RELEASE
-    ## <RELEASE_TARBALL_PATH> :: release file path (e.g. /home/ubuntu/workspace/paasta-app-lifecycle-service-release.tgz) 
-    $ bosh -e <bosh_name> create-release --name=paasta-app-lifecycle-service --version=1.1.1 --tarball=<RELEASE_TARBALL_PATH> --force
+    $ cd ap-app-lifecycle-release
+    ## <RELEASE_TARBALL_PATH> :: release file path (e.g. /home/ubuntu/workspace/ap-app-lifecycle-release.tgz) 
+    $ bosh -e <bosh_name> create-release --name=ap-app-lifecycle --version=1.1.1 --tarball=<RELEASE_TARBALL_PATH> --force
     ```
-
-### PAAS-TA-APP-LIFECYCLE-SERVICE-DEPLOYMENT
-- https://github.com/PaaS-TA/service-deployment/tree/master/lifecycle-service
 
 ### 참고 자료
 - https://bosh.io/docs
@@ -129,6 +126,6 @@
 
 ## Contributors ✨
 
-<a href="https://github.com/PaaS-TA/PAAS-TA-APP-LIFECYCLE-SERVICE-RELEASE/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=PaaS-TA/PAAS-TA-APP-LIFECYCLE-SERVICE-RELEASE" />
+<a href="https://github.com/K-PaaS/ap-api-gateway-release/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=K-PaaS/ap-api-gateway-release" />
 </a>

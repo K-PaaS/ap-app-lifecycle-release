@@ -1,5 +1,5 @@
 ---
-name: service-broker
+name: ap-app-lifecycle-broker
 
 templates:
   bin/service_ctl.erb: bin/service_ctl
@@ -8,7 +8,7 @@ templates:
 packages: 
 - java
 - common
-- service-broker
+- ap-app-lifecycle-broker
 
 consumes:
 - name: brokerdb_link
@@ -54,7 +54,7 @@ properties:
     default: "app-lifecycle"
   services.description:
     description: "A short description of the service"
-    default: "A PaaS-TA App LifeCycle Service for application development. Required parameter for provisioning the service. {password: password}"
+    default: "A Application Platform App LifeCycle Service for application development. Required parameter for provisioning the service. {password: password}"
   services.bindable:
     description: "Specifies whether service instances of the service can be bound to applications"
     default: false
@@ -69,13 +69,13 @@ properties:
     default: "Paasta App LifeCycle Service"
   services.metadata.providerDisplayName:
     description: "The name of the upstream entity providing the actual service"
-    default: "PaaS-TA"
+    default: "K-PaaS"
   services.metadata.documentationUrl:
     description: "Link to documentation page for the service"
-    default: "https://paas-ta.kr/"
+    default: "https://k-paas.or.kr/"
   services.metadata.supportUrl:
     description: "Link to support page for the service"
-    default: "https://paas-ta.kr"
+    default: "https://k-paas.or.kr"
   services.plan_updatable:
     description: "Whether the service supports upgrade/downgrade for some plans"
     default: false

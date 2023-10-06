@@ -2,12 +2,12 @@
 
 set -e -x
 
-JOB_NAME=service-broker
+JOB_NAME=ap-app-lifecycle-broker
 SCRIPT_NAME=$(basename $0)
 JOB_DIR=/var/vcap/jobs/${JOB_NAME}
 PKG_DIR=/var/vcap/packages/${JOB_NAME}
 JAVA_DIR=/var/vcap/packages/java
-JAR_NAME="paasta-app-lifecycle-service-broker.jar"
+JAR_NAME="ap-app-lifecycle-broker.jar"
 CONF_FILE=${JOB_DIR}/config/application.yml
 
 RUN_DIR=/var/vcap/sys/run/${JOB_NAME}

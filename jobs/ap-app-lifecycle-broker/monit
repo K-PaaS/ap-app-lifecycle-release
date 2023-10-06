@@ -1,0 +1,5 @@
+check process ap-app-lifecycle-broker
+  with pidfile /var/vcap/sys/run/ap-app-lifecycle-broker/ap-app-lifecycle-broker.pid
+  start program "/var/vcap/jobs/ap-app-lifecycle-broker/bin/service_ctl start" with timeout 30 seconds
+  stop program "/var/vcap/jobs/ap-app-lifecycle-broker/bin/service_ctl stop"
+  group vcap
