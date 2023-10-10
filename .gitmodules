@@ -1,3 +1,4 @@
-[submodule "src/service-broker"]
-	path = src/service-broker
-	url = https://github.com/PaaS-TA/PAAS-TA-APP-LIFECYCLE-SERVICE-BROKER
+[submodule "src/ap-app-lifecycle-broker"]
+	path = src/ap-app-lifecycle-broker
+	url = https://github.com/K-PaaS/ap-app-lifecycle-broker
+	branch = kpaas

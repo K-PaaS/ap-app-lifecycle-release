@@ -1,0 +1,7 @@
+---
+name: ap-app-lifecycle-broker
+
+dependencies: []
+
+files:
+- ap-app-lifecycle-broker/ap-app-lifecycle-broker.jar

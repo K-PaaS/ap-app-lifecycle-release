@@ -1,5 +1,5 @@
 <%
-log_dir = '/var/vcap/sys/log/service-broker'
+log_dir = '/var/vcap/sys/log/ap-app-lifecycle-broker'
 %>
 
 server:
@@ -7,7 +7,7 @@ server:
 
 spring:
   application:
-    name: app-lifecycle-service-broker
+    name: ap-app-lifecycle-broker
   datasource:
     url: jdbc:mysql://<%= link('brokerdb_link').instances[0].address %>:<%= link('brokerdb_link').p('database.port') %>/<%= link('brokerdb_link').p('database.broker.schema_name') %>?zeroDateTimeBehavior=convertToNull&autoReconnect=true&useUnicode=true&characterEncoding=utf8
     username: <%= link('brokerdb_link').p('database.broker.username') %>
@@ -25,7 +25,7 @@ logging:
   file: <%= "#{log_dir}/appLifecycleBroker.log" %>
   level:
     root: <%= p('logging.level_root') %>
-    org.paasta.servicebroker.applifecycle: <%= p('logging.level_broker') %>
+    org.servicebroker.applifecycle: <%= p('logging.level_broker') %>
     org.hibernate: <%= p('logging.level_hibernate') %>
 
 service:
