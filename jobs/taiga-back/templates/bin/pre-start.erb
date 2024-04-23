@@ -91,7 +91,7 @@ if [ ! -e ${SETUP_HISTORY_DIR}/mysql-client ]; then
 
     wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
     dpkg -i mysql-apt-config_0.8.12-1_all.deb
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
     apt update
     apt install -y -f mysql-client=5.7*
     echo "##### SETUP :: APP-LIFECYCLE :: mariadb-client :: END"
