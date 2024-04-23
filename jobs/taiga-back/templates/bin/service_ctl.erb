@@ -13,7 +13,7 @@ HOME_DIR="/var/vcap/data/lifecycle"
 source /var/vcap/packages/common/syslog_utils.sh
 source /var/vcap/packages/common/pid_utils.sh
 
-tee_output_to_sys_log_and_file ${LOG_DIR} ${SCRIPT_NAME}
+tee_output_to_sys_log_and_file_without_time ${LOG_DIR} ${SCRIPT_NAME}
 
 case $1 in
 
@@ -37,7 +37,8 @@ case $1 in
         --workers 3 \
         --worker-tmp-dir /dev/shm \
         --log-level=info \
-        --access-logfile ${LOG_DIR}/taiga-back.log \
+        --access-logfile ${LOG_DIR}/taiga-back-access.log \
+        --log-file ${LOG_DIR}/taiga-back.log \
         &
 
 

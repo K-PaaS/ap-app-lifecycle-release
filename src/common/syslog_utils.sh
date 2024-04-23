@@ -14,6 +14,14 @@ function tee_output_to_sys_log_and_file {
   exec 2> >(tee -a >(logger -p user.error -t "vcap.${log_name}.stderr") | prepend_datetime >>"${log_dir}/${log_name}.err.log")
 }
 
+function tee_output_to_sys_log_and_file_without_time {
+  declare log_dir="$1" log_name="$2"
+
+  exec > >(tee -a >(logger -p user.info -t "vcap.${log_name}.stdout") >>"${log_dir}/${log_name}.log")
+  exec 2> >(tee -a >(logger -p user.error -t "vcap.${log_name}.stderr") >>"${log_dir}/${log_name}.err.log")
+}
+
+
 # tee_output_to_sys_log
 #
 # @param log_name [String] used to name the log files eg: log_name.log and log_name.err.log
